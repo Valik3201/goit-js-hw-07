@@ -30,14 +30,21 @@
     />
     <meta name="msapplication-TileColor" content="#f7df1e" />
     <meta name="theme-color" content="#10162F" />
-    <title>Image gallery</title>
+    <title>Image Gallery</title>
+
+    <!-- Including BasicLightbox CSS from a CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+      rel="stylesheet"
+    />
+    <!-- External CSS for common styles -->
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <p>
-      <a href="index.html" class="back-button"
-        ><svg
+      <a href="index.html" class="back-button">
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -50,8 +57,8 @@
             d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
           />
         </svg>
-        Back</a
-      >
+        Back
+      </a>
     </p>
 
     <h1 class="title">Image Gallery</h1>
@@ -59,6 +66,7 @@
     <!-- Add gallery items to this list -->
     <ul class="gallery"></ul>
 
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
     <script src="js/01-gallery.js" type="module"></script>
   </body>
 </html>

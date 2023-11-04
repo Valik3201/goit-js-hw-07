@@ -27,13 +27,39 @@ const galleryImage = galleryItems.map((element) => {
 galleryContainer.append(...galleryImage);
 
 // Event Delegation
+let activeModal = null;
 
 galleryContainer.addEventListener("click", function (event) {
   event.preventDefault();
 
-  if (event.target.nodeName !== "IMG") {
+  if (
+    event.target.nodeName === "IMG" &&
+    event.target.classList.contains("gallery__image")
+  ) {
+    const largeImageUrl = event.target.dataset.source;
+
+    // Modal Window BasicLightBox
+    const instance = basicLightbox.create(
+      `
+    <img src="${largeImageUrl}" width="800" height="600">`,
+      {
+        onShow: (instance) => {
+          console.log("Modal is about to show");
+        },
+        onClose: (instance) => {
+          console.log("Modal is about to close");
+        },
+      }
+    );
+    instance.show();
+    activeModal = instance;
+  } else {
     return;
   }
+});
 
-  // Modal Window
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && activeModal) {
+    activeModal.close();
+  }
 });
