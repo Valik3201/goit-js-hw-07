@@ -1,4 +1,4 @@
-# Delegation of Events, Throttle/Debounce, and Lazy Loading
+# Event Delegation, Throttle/Debounce, and Lazy Loading
 
 This repository explores various web development techniques, including event delegation, throttle and debounce functions, and lazy loading of images. The repository includes two main tasks:
 
