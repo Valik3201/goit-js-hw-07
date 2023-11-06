@@ -31,6 +31,16 @@
     <meta name="msapplication-TileColor" content="#f7df1e" />
     <meta name="theme-color" content="#10162F" />
     <title>SimpleLightbox library</title>
+
+    <!-- Including SimpleLightbox CSS from a CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css"
+      integrity="sha512-FaAQujRxLMvw+BkmGN3w7u9EdQQr1t0vQoY8KDh09+6SFaWSTe+KrT8oCWg25X91hytm5c5BTmiSGQejkraaZg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- External CSS for common styles -->
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -54,9 +64,20 @@
       >
     </p>
 
+    <h1 class="title">SimpleLightbox Gallery</h1>
+
     <!-- Add gallery items to this list -->
     <ul class="gallery"></ul>
 
+    <!-- Include SimpleLightbox library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"
+      integrity="sha512-/4kQE5RJQYHRhUiK+CZS8UhaJTnLmQkDuf8lOhiP2xLdjthA/rm0VqqWjcyelIx+NDyNHFmtqvuIgOFQnI34WA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Include external JavaScript as a module -->
     <script src="js/02-lightbox.js" type="module"></script>
   </body>
 </html>
